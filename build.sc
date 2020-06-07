@@ -9,7 +9,8 @@ object backend extends ScalaModule {
       ivy"com.github.ghostdogpr::caliban:0.8.1",
       ivy"com.github.ghostdogpr::caliban-akka-http:0.8.1",
       ivy"de.heikoseeberger::akka-http-circe:1.32.0",
-      ivy"io.circe::circe-generic:0.13.0"
+      ivy"io.circe::circe-generic:0.13.0",
+      ivy"com.lihaoyi::scalatags:0.8.2"
     )
 
 }

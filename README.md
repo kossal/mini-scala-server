@@ -42,3 +42,12 @@ bin/mill backend.runMain backend.Main # corre la App backend.Main
 
 ```
 
+# Librerias 
+
+## [Akka HTTP]()
+
+Usagemos Akka HTTP como servidor web. 
+
+## [Caliban](https://ghostdogpr.github.io/caliban/)
+
+Utilizamos Caliban para generar nuestra API graphql

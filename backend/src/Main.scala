@@ -19,7 +19,8 @@ object Main extends App {
 
   val routes =
       helloController.routes ~
-      byeController.routes
+      byeController.routes ~
+      GQLController().routes
     
     
 
