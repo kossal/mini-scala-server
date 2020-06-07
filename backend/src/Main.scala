@@ -8,17 +8,19 @@ import akka.actor.ActorSystem
 import scala.concurrent.ExecutionContextExecutor
 import scala.io.StdIn
 
+
 object Main extends App {
 
   implicit val system: ActorSystem                        = ActorSystem()
   implicit val executionContext: ExecutionContextExecutor = system.dispatcher
 
+  val helloController = new GreetController("hello")
+  val byeController = new GreetController("bye")
+
   val routes =
-    pathPrefix("hello") {
-      path(Segment) { name: String =>
-        complete(s"Hello ${name}")
-      }
-    }
+      helloController.routes ~
+      byeController.routes
+    
     
 
   val bindingFuture = Http().bindAndHandle(routes, "0.0.0.0", 8080)
